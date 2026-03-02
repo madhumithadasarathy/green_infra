@@ -55,9 +55,9 @@ export default function About() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
           >
-            <p className="text-sm text-neutral-500 mb-4">
-              About Aazhira
-            </p>
+<span className="inline-flex items-center px-4 py-1.5 text-xs font-medium bg-zinc-200 text-[#2f5f1e] rounded-full">
+  About Aazhi
+</span>
 
             <h2 className="text-5xl font-semibold leading-tight">
               {current.title}
