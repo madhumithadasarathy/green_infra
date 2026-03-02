@@ -7,8 +7,11 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "Green Infrastructure",
-  description: "Landing page",
+  title: "Aazhi",
+  description: "Deep systems for green infrastructure",
+  icons: {
+    icon: "/logo.svg",
+  },
 };
 
 export default function RootLayout({
