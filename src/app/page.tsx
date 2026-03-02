@@ -4,10 +4,15 @@ import Features from "@/app/components/Features";
 
 export default function Home() {
   return (
-    <main className="max-w-6xl mx-auto px-6">
-      <Navbar />
+    <>
+      {/* FULL WIDTH HERO */}
+            <Navbar />
       <Hero />
-      <Features />
-    </main>
+
+      {/* Constrained Sections */}
+      <main className="max-w-6xl mx-auto px-6">
+        <Features />
+      </main>
+    </>
   );
 }
