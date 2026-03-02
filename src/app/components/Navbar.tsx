@@ -21,36 +21,36 @@ export default function Navbar() {
         w-[92%] max-w-6xl
         z-50
         transition-all duration-500
-        ${
-          scrolled
-            ? "bg-white/70 backdrop-blur-xl shadow-lg border border-white/30"
-            : "bg-white/10 backdrop-blur-md border border-white/20"
-        }
         rounded-2xl
         px-8 py-4
         flex justify-between items-center
+        ${
+          scrolled
+            ? "bg-white/90 backdrop-blur-xl shadow-xl border border-black/10"
+            : "bg-white/60 backdrop-blur-lg border border-white/40"
+        }
       `}
     >
       {/* Left Links */}
-      <nav className="hidden md:flex gap-8 text-sm font-medium text-white">
-        <a href="#" className="hover:opacity-70 transition">
+      <nav className="hidden md:flex gap-8 text-sm font-medium text-black">
+        <a href="#" className="hover:opacity-60 transition">
           Platform
         </a>
-        <a href="#" className="hover:opacity-70 transition">
+        <a href="#" className="hover:opacity-60 transition">
           How It Works
         </a>
-        <a href="#" className="hover:opacity-70 transition">
+        <a href="#" className="hover:opacity-60 transition">
           About
         </a>
       </nav>
 
       {/* Center Logo */}
-      <div className="text-lg font-semibold text-white tracking-wide">
+      <div className="text-lg font-semibold text-black tracking-wide">
         Terrava
       </div>
 
       {/* CTA */}
-      <button className="bg-white text-black px-5 py-2 rounded-full text-sm font-medium hover:bg-neutral-200 transition">
+      <button className="bg-black text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-neutral-800 transition">
         Explore Platform
       </button>
     </header>
