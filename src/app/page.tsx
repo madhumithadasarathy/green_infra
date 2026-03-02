@@ -1,6 +1,6 @@
 import Navbar from "@/app/components/Navbar";
 import Hero from "@/app/components/Hero";
-import Features from "@/app/components/Features";
+import About from "./components/About";
 
 export default function Home() {
   return (
@@ -8,11 +8,7 @@ export default function Home() {
       {/* FULL WIDTH HERO */}
             <Navbar />
       <Hero />
-
-      {/* Constrained Sections */}
-      <main className="max-w-6xl mx-auto px-6">
-        <Features />
-      </main>
+      <About />
     </>
   );
 }
