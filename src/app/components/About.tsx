@@ -36,7 +36,6 @@ const features = [
 
 export default function About() {
   const [active, setActive] = useState(0);
-
   const current = features[active];
 
   return (
@@ -44,7 +43,7 @@ export default function About() {
       <div className="w-full px-8 md:px-20 grid grid-cols-1 md:grid-cols-2 gap-20">
 
         {/* LEFT SIDE */}
-        <div className="space-y-12">
+        <div className="space-y-10">
 
           <motion.div
             key={active}
@@ -60,20 +59,20 @@ export default function About() {
               {current.title}
             </h2>
 
-            <p className="mt-8 text-neutral-600 text-lg leading-relaxed max-w-xl">
+            <p className="mt-6 text-neutral-600 text-lg leading-relaxed max-w-xl">
               {current.mainText}
             </p>
           </motion.div>
 
-          {/* Dynamic Images */}
-          <div className="flex gap-8">
-            {current.images.map((img, index) => (
+          {/* ALIGNED BIGGER IMAGES */}
+          <div className="flex gap-10 mt-4">
+            {current.images.map((img) => (
               <motion.div
                 key={img}
-                initial={{ opacity: 0, scale: 0.9 }}
+                initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.4 }}
-                className="relative w-40 h-40 rounded-3xl overflow-hidden"
+                className="relative w-56 h-56 md:w-64 md:h-64 rounded-[28px] overflow-hidden shadow-lg"
               >
                 <Image
                   src={img}
@@ -87,7 +86,7 @@ export default function About() {
         </div>
 
         {/* RIGHT SIDE CARDS */}
-        <div className="space-y-8 -mt-10"> {/* MOVED UP */}
+        <div className="space-y-8 -mt-10">
 
           {features.map((feature, index) => (
             <motion.div
@@ -96,12 +95,13 @@ export default function About() {
               onClick={() => setActive(index)}
               className={`
                 cursor-pointer
-                rounded-[32px] p-8
+                rounded-[32px]
+                p-8
                 flex justify-between items-center
                 transition-all duration-300
                 ${
                   active === index
-                    ? "bg-[#2f5f1e] text-white shadow-lg"
+                    ? "bg-[#2f5f1e] text-white shadow-xl"
                     : "bg-white shadow-sm"
                 }
               `}
@@ -127,6 +127,7 @@ export default function About() {
               </div>
             </motion.div>
           ))}
+
         </div>
       </div>
     </section>
