@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 
 const features = [
   {
@@ -13,6 +14,7 @@ const features = [
     mainText:
       "Aazhira structures infrastructure ecosystems around system intelligence and connectivity.",
     images: ["/about-1.jpg", "/about-2.jpg"],
+    cardImage: "/about-3.jpg",
   },
   {
     id: 1,
@@ -22,6 +24,7 @@ const features = [
     mainText:
       "Scale green infrastructure confidently across cities and regions with unified oversight.",
     images: ["/about-3.jpg", "/about-4.jpg"],
+    cardImage: "/about-4.jpg",
   },
   {
     id: 2,
@@ -31,6 +34,7 @@ const features = [
     mainText:
       "Engineered for longevity and resilience in evolving environmental landscapes.",
     images: ["/about-5.jpg", "/about-6.jpg"],
+    cardImage: "/about-5.jpg",
   },
 ];
 
@@ -64,7 +68,7 @@ export default function About() {
             </p>
           </motion.div>
 
-          {/* ALIGNED BIGGER IMAGES */}
+          {/* Bigger aligned images */}
           <div className="flex gap-10 mt-4">
             {current.images.map((img) => (
               <motion.div
@@ -88,45 +92,74 @@ export default function About() {
         {/* RIGHT SIDE CARDS */}
         <div className="space-y-8 -mt-10">
 
-          {features.map((feature, index) => (
-            <motion.div
-              key={feature.id}
-              whileHover={{ y: -4 }}
-              onClick={() => setActive(index)}
-              className={`
-                cursor-pointer
-                rounded-[32px]
-                p-8
-                flex justify-between items-center
-                transition-all duration-300
-                ${
-                  active === index
-                    ? "bg-[#2f5f1e] text-white shadow-xl"
-                    : "bg-white shadow-sm"
-                }
-              `}
-            >
-              <div>
-                <h3 className="text-xl font-semibold mb-3">
-                  {feature.title}
-                </h3>
+          {features.map((feature, index) => {
+            const isActive = active === index;
 
-                <p
-                  className={`mb-6 ${
-                    active === index
-                      ? "text-white/90"
-                      : "text-neutral-600"
-                  }`}
-                >
-                  {feature.description}
-                </p>
+            return (
+              <motion.div
+                key={feature.id}
+                whileHover={{ y: -4 }}
+                onClick={() => setActive(index)}
+                className={`
+                  cursor-pointer
+                  rounded-[32px]
+                  p-8
+                  flex justify-between items-center
+                  transition-all duration-300
+                  ${
+                    isActive
+                      ? "bg-[#2f5f1e] text-white shadow-xl"
+                      : "bg-white shadow-sm"
+                  }
+                `}
+              >
+                {/* TEXT */}
+                <div className="flex-1">
+                  <h3 className="text-xl font-semibold mb-3">
+                    {feature.title}
+                  </h3>
 
-                <button className="text-sm font-medium underline">
-                  Learn More
-                </button>
-              </div>
-            </motion.div>
-          ))}
+                  <p
+                    className={`mb-6 ${
+                      isActive ? "text-white/90" : "text-neutral-600"
+                    }`}
+                  >
+                    {feature.description}
+                  </p>
+
+                  {/* Learn More with MUI icon */}
+                  <div className="flex items-center gap-3">
+                    <span className="text-sm font-medium underline">
+                      Learn More
+                    </span>
+
+                    <div
+                      className={`w-8 h-8 flex items-center justify-center rounded-md ${
+                        isActive ? "bg-white" : "bg-black"
+                      }`}
+                    >
+                      <ArrowOutwardIcon
+                        style={{
+                          fontSize: 16,
+                          color: isActive ? "#2f5f1e" : "#ffffff",
+                        }}
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                {/* CARD IMAGE */}
+                <div className="relative w-28 h-28 rounded-2xl overflow-hidden ml-8">
+                  <Image
+                    src={feature.cardImage}
+                    alt={feature.title}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </motion.div>
+            );
+          })}
 
         </div>
       </div>
