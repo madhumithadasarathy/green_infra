@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -23,7 +24,7 @@ export default function Navbar() {
         transition-all duration-500
         rounded-2xl
         px-8 py-4
-        flex justify-between items-center
+        flex items-center justify-between
         ${
           scrolled
             ? "bg-white/90 backdrop-blur-xl shadow-xl border border-black/10"
@@ -31,26 +32,35 @@ export default function Navbar() {
         }
       `}
     >
-      {/* Left Links */}
-      <nav className="hidden md:flex gap-8 text-sm font-medium text-black">
-        <a href="#" className="hover:opacity-60 transition">
+      {/* LEFT NAV */}
+      <nav className="hidden md:flex gap-10 text-sm font-bold text-black">
+        <a href="#" className="hover:text-green-700 transition">
           Platform
         </a>
-        <a href="#" className="hover:opacity-60 transition">
+        <a href="#" className="hover:text-green-700 transition">
           How It Works
         </a>
-        <a href="#" className="hover:opacity-60 transition">
+        <a href="#" className="hover:text-green-700 transition">
           About
         </a>
       </nav>
 
-      {/* Center Logo */}
-      <div className="text-lg font-semibold text-black tracking-wide">
-        Terrava
+      {/* CENTER BRAND */}
+      <div className="absolute left-1/2 -translate-x-1/2 flex items-center gap-3">
+        <Image
+          src="/logo.svg"
+          alt="Aazhira Logo"
+          width={28}
+          height={28}
+          priority
+        />
+        <span className="text-lg font-semibold tracking-wide text-black">
+          Aazhi
+        </span>
       </div>
 
-      {/* CTA */}
-      <button className="bg-black text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-neutral-800 transition">
+      {/* RIGHT CTA */}
+      <button className="bg-black text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-green-800 transition">
         Explore Platform
       </button>
     </header>
