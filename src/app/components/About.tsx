@@ -14,7 +14,7 @@ const features = [
     mainText:
       "Aazhira structures infrastructure ecosystems around system intelligence and connectivity.",
     images: ["/about-1.jpg", "/about-2.jpg"],
-    cardImage: "/about-3.jpg",
+    cardImage: "/about-7.jpg",
   },
   {
     id: 1,
@@ -24,7 +24,7 @@ const features = [
     mainText:
       "Scale green infrastructure confidently across cities and regions with unified oversight.",
     images: ["/about-3.jpg", "/about-4.jpg"],
-    cardImage: "/about-4.jpg",
+    cardImage: "/about-8.jpg",
   },
   {
     id: 2,
@@ -34,7 +34,7 @@ const features = [
     mainText:
       "Engineered for longevity and resilience in evolving environmental landscapes.",
     images: ["/about-5.jpg", "/about-6.jpg"],
-    cardImage: "/about-5.jpg",
+    cardImage: "/about-9.jpg",
   },
 ];
 
@@ -149,7 +149,7 @@ export default function About() {
                 </div>
 
                 {/* CARD IMAGE */}
-                <div className="relative w-28 h-28 rounded-2xl overflow-hidden ml-8">
+                <div className="relative w-44 h-28 md:w-56 md:h-32 rounded-2xl overflow-hidden ml-8">
                   <Image
                     src={feature.cardImage}
                     alt={feature.title}
