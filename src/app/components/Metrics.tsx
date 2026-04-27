@@ -17,7 +17,13 @@ export default function Metrics() {
       <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-blue-500/10 rounded-full blur-[100px] -ml-32 -mb-32"></div>
 
       <div className="px-8 md:px-20 relative z-10">
-        <div className="text-center max-w-3xl mx-auto mb-24">
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: false }}
+          transition={{ duration: 0.8 }}
+          className="text-center max-w-3xl mx-auto mb-24"
+        >
           <span className="inline-flex items-center px-4 py-1.5 text-xs font-medium bg-emerald-500/10 text-emerald-400 rounded-full mb-6 border border-emerald-500/20">
             Real-world Impact
           </span>
@@ -28,7 +34,7 @@ export default function Metrics() {
             Our platform provides real-time monitoring and reporting, ensuring every 
             green infrastructure project meets its environmental targets.
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
           {stats.map((stat, index) => (

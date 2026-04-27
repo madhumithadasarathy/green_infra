@@ -43,11 +43,17 @@ export default function About() {
   const current = features[active];
 
   return (
-    <section className="w-full bg-[#f5f6f4] py-28">
+    <section className="w-full bg-[#f5f6f4] py-28 overflow-hidden">
       <div className="w-full px-8 md:px-20 grid grid-cols-1 md:grid-cols-2 gap-20">
 
         {/* LEFT SIDE */}
-        <div className="space-y-10">
+        <motion.div 
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: false }}
+          transition={{ duration: 0.8 }}
+          className="space-y-10"
+        >
 
           <motion.div
             key={active}
@@ -87,10 +93,16 @@ export default function About() {
               </motion.div>
             ))}
           </div>
-        </div>
+        </motion.div>
 
         {/* RIGHT SIDE CARDS */}
-        <div className="space-y-8 -mt-10">
+        <motion.div 
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: false }}
+          transition={{ duration: 0.8 }}
+          className="space-y-8 -mt-10"
+        >
 
           {features.map((feature, index) => {
             const isActive = active === index;
@@ -161,7 +173,7 @@ export default function About() {
             );
           })}
 
-        </div>
+        </motion.div>
       </div>
     </section>
   );
