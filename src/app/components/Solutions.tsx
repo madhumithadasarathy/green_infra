@@ -58,26 +58,13 @@ export default function Solutions() {
             </h2>
           </div>
           
-          <div className="flex gap-4 mb-2">
-            <button 
-              onClick={prevSlide}
-              className="w-14 h-14 rounded-full border border-zinc-200 flex items-center justify-center hover:bg-zinc-50 transition-colors"
-              aria-label="Previous slide"
-            >
-              <ChevronLeftIcon sx={{ fontSize: 28 }} />
-            </button>
-            <button 
-              onClick={nextSlide}
-              className="w-14 h-14 rounded-full border border-zinc-200 flex items-center justify-center hover:bg-zinc-50 transition-colors"
-              aria-label="Next slide"
-            >
-              <ChevronRightIcon sx={{ fontSize: 28 }} />
-            </button>
-          </div>
+          <p className="text-neutral-500 text-lg max-w-sm mb-2">
+            We provide end-to-end infrastructure solutions that balance human needs with environmental health.
+          </p>
         </div>
       </div>
 
-      <div className="relative px-8 md:px-20">
+      <div className="relative px-8 md:px-20 mb-16">
         <motion.div 
           className="flex gap-8"
           animate={{ x: `-${currentIndex * (400 + 32)}px` }}
@@ -113,6 +100,24 @@ export default function Solutions() {
             </div>
           ))}
         </motion.div>
+      </div>
+
+      {/* BOTTOM CONTROLS */}
+      <div className="flex justify-center gap-6">
+        <button 
+          onClick={prevSlide}
+          className="w-16 h-16 rounded-full border border-zinc-200 flex items-center justify-center hover:bg-zinc-50 transition-all hover:scale-105 active:scale-95 shadow-sm"
+          aria-label="Previous slide"
+        >
+          <ChevronLeftIcon sx={{ fontSize: 32 }} />
+        </button>
+        <button 
+          onClick={nextSlide}
+          className="w-16 h-16 rounded-full border border-zinc-200 flex items-center justify-center hover:bg-zinc-50 transition-all hover:scale-105 active:scale-95 shadow-sm"
+          aria-label="Next slide"
+        >
+          <ChevronRightIcon sx={{ fontSize: 32 }} />
+        </button>
       </div>
     </section>
   );
