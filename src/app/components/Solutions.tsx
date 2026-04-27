@@ -49,18 +49,30 @@ export default function Solutions() {
     <section className="w-full bg-white py-32 overflow-hidden">
       <div className="px-8 md:px-20 mb-20">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
-          <div className="max-w-2xl">
+          <motion.div 
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.6 }}
+            className="max-w-2xl"
+          >
             <span className="inline-flex items-center px-4 py-1.5 text-xs font-medium bg-zinc-100 text-[#2f5f1e] rounded-full mb-6">
               Our Solutions
             </span>
             <h2 className="text-4xl md:text-6xl font-semibold leading-tight tracking-tight text-zinc-900">
               Innovative systems for <br /> a resilient planet
             </h2>
-          </div>
+          </motion.div>
           
-          <p className="text-neutral-500 text-lg max-w-sm mb-2">
+          <motion.p 
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-neutral-500 text-lg max-w-sm mb-2"
+          >
             We provide end-to-end infrastructure solutions that balance human needs with environmental health.
-          </p>
+          </motion.p>
         </div>
       </div>
 
