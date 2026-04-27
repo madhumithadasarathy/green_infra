@@ -14,7 +14,7 @@ export default function Platform() {
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
           className="relative w-full h-[85vh] rounded-[40px] overflow-hidden"
         >
           <Image
@@ -39,7 +39,7 @@ export default function Platform() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
             className="text-4xl md:text-5xl font-semibold leading-tight"
           >
             Manage Infrastructure as One System
@@ -57,7 +57,7 @@ export default function Platform() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
             className="flex flex-col md:flex-row gap-14 items-start"
           >
             {/* Text */}

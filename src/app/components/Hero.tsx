@@ -25,7 +25,8 @@ export default function Hero() {
         {/* Heading */}
         <motion.h1
           initial={{ opacity: 0, y: 60 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false }}
           transition={{ duration: 0.9, ease: "easeOut" }}
           className="
             text-white
@@ -45,7 +46,8 @@ export default function Hero() {
         {/* Subheading */}
         <motion.p
           initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false }}
           transition={{ duration: 0.9, delay: 0.2 }}
           className="
             mt-6
