@@ -3,18 +3,18 @@
 import { motion } from "framer-motion";
 
 const stats = [
-  { label: "CO2 Reduced", value: "2.4M", suffix: " Tons", color: "text-emerald-600" },
-  { label: "Water Saved", value: "850M", suffix: " Liters", color: "text-blue-600" },
-  { label: "Energy Generated", value: "1.2", suffix: " GW", color: "text-amber-600" },
-  { label: "Protected Land", value: "45k", suffix: " Acres", color: "text-teal-600" },
+  { label: "CO2 Reduced", value: "2.4M", suffix: " Tons", color: "text-emerald-500" },
+  { label: "Water Saved", value: "850M", suffix: " Liters", color: "text-lime-500" },
+  { label: "Energy Generated", value: "1.2", suffix: " GW", color: "text-amber-500" },
+  { label: "Protected Land", value: "45k", suffix: " Acres", color: "text-teal-500" },
 ];
 
 export default function Metrics() {
   return (
-    <section className="w-full bg-[#111827] py-32 text-white overflow-hidden relative">
+    <section className="w-full bg-[#051105] py-32 text-white overflow-hidden relative">
       {/* Background Decorative Element */}
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-emerald-500/10 rounded-full blur-[120px] -mr-48 -mt-48"></div>
-      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-blue-500/10 rounded-full blur-[100px] -ml-32 -mb-32"></div>
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-emerald-500/5 rounded-full blur-[120px] -mr-48 -mt-48"></div>
+      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-lime-500/5 rounded-full blur-[100px] -ml-32 -mb-32"></div>
 
       <div className="px-8 md:px-20 relative z-10">
         <motion.div 
