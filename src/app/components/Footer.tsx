@@ -50,13 +50,13 @@ export default function Footer() {
             <div className="col-span-2 md:col-span-1">
               <h4 className="font-semibold mb-6 uppercase text-xs tracking-widest text-zinc-400">Newsletter</h4>
               <p className="text-zinc-500 mb-6 text-sm">Get the latest updates on green infrastructure.</p>
-              <form className="relative">
+              <form className="relative max-w-sm">
                 <input 
                   type="email" 
                   placeholder="Email address" 
-                  className="w-full bg-white border border-zinc-200 rounded-full py-4 px-6 outline-none focus:border-[#2f5f1e] transition-colors"
+                  className="w-full bg-white border border-zinc-200 rounded-full py-3 px-5 text-sm outline-none focus:border-[#2f5f1e] transition-colors"
                 />
-                <button className="absolute right-2 top-2 bottom-2 bg-black text-white px-6 rounded-full text-sm font-medium hover:bg-[#2f5f1e] transition-colors">
+                <button className="absolute right-1.5 top-1.5 bottom-1.5 bg-black text-white px-5 rounded-full text-xs font-medium hover:bg-[#2f5f1e] transition-colors">
                   Join
                 </button>
               </form>
