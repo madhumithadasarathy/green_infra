@@ -37,7 +37,7 @@ export default function Metrics() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1, duration: 0.6 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
               className="flex flex-col items-center text-center p-8 rounded-[40px] bg-white/5 border border-white/10 backdrop-blur-sm"
             >
               <span className={`text-5xl md:text-6xl font-bold mb-4 ${stat.color}`}>
