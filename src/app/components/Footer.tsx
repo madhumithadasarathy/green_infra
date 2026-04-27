@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function Footer() {
   return (
     <footer className="w-full bg-[#f5f6f4] pt-24 pb-12">
-      <div className="px-8 md:px-20">
+      <div className="px-8 md:px-32">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 mb-20">
           <div>
             <div className="flex items-center gap-3 mb-8">
@@ -28,7 +28,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
             <div>
               <h4 className="font-semibold mb-6 uppercase text-xs tracking-widest text-zinc-400">Platform</h4>
               <ul className="space-y-4">
@@ -47,16 +47,16 @@ export default function Footer() {
                 <li><Link href="#" className="text-zinc-600 hover:text-black transition-colors">Contact</Link></li>
               </ul>
             </div>
-            <div className="col-span-2 md:col-span-1">
+            <div className="col-span-2 md:col-span-2">
               <h4 className="font-semibold mb-6 uppercase text-xs tracking-widest text-zinc-400">Newsletter</h4>
               <p className="text-zinc-500 mb-6 text-sm">Get the latest updates on green infrastructure.</p>
-              <form className="relative max-w-sm">
+              <form className="relative w-full min-w-[300px] max-w-sm">
                 <input 
                   type="email" 
                   placeholder="Email address" 
-                  className="w-full bg-white border border-zinc-200 rounded-full py-3 px-5 text-sm outline-none focus:border-[#2f5f1e] transition-colors"
+                  className="w-full bg-white border border-zinc-200 rounded-full py-3 pl-5 pr-20 text-sm outline-none focus:border-[#2f5f1e] transition-colors"
                 />
-                <button className="absolute right-1.5 top-1.5 bottom-1.5 bg-black text-white px-5 rounded-full text-xs font-medium hover:bg-[#2f5f1e] transition-colors">
+                <button className="absolute right-1.5 top-1.5 bottom-1.5 bg-black text-white px-4 rounded-full text-xs font-medium hover:bg-[#2f5f1e] transition-colors">
                   Join
                 </button>
               </form>
